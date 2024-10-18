@@ -24,8 +24,9 @@ if "%param%"=="createcheck" (
 	echo %value%>%setting%.txt
 ) else (
     echo Invalid parameter. Use one of the following: createcheck, load, modify
-	mkdir a
+	mkdir out
+	cd out
 )
 cd ..
-if exist a ( RMDIR /S /Q a )
+if exist out ( RMDIR /S /Q out )
 goto :eof
