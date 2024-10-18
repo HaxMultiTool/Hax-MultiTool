@@ -18,8 +18,10 @@ if "%param%"=="createcheck" (
 		echo y>music.txt
 	)
 ) else if "%param%"=="modify" (
-    REM Logic for modify
-    echo Modifying...
+    REM Logic for modify any settings
+	cd settings
+    echo Modifying variable %setting% with value %value%
+	echo %value%>%setting%.txt
 ) else (
     echo Invalid parameter. Use one of the following: createcheck, load, modify
 )
